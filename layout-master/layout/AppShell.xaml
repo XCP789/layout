@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="layout.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:layout"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Agenda Personal">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout Padding="20">
+            <Label Text="Mi Agenda" FontSize="20" FontAttributes="Bold"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <TabBar>
+        <Tab Title="Inicio" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="home" />
+        </Tab>
+
+        <Tab Title="Contactos" Icon="contacts.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Contactos}" Route="contactos" />
+        </Tab>
+
+        <Tab Title="Configuración" Icon="settings.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Configuracion}" Route="settings" />
+        </Tab>
+    </TabBar>
+
+    <ShellContent 
+    Route="crearcontacto" 
+        ContentTemplate="{DataTemplate local:CrearContacto}" 
+    Shell.FlyoutItemIsVisible="False"/>
+
+        <ShellContent 
+        Route="crearcontacto" 
+        ContentTemplate="{DataTemplate local:CrearContacto}" 
+        Shell.FlyoutItemIsVisible="False" />
+
+    <ShellContent
+    Route="login"
+    ContentTemplate="{DataTemplate local:LoginPage}" />
+</Shell>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="layout.CrearContacto"
+             Title="CrearContacto">
+
+    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+        <FlexLayout Direction="Column" 
+                   AlignItems="Center" 
+                   JustifyContent="Center"
+                   Padding="20"
+                   WidthRequest="300">
+
+            <Label Text="Crear Contacto" 
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,15"/>
+            
+            <Entry Placeholder="Nombre" 
+                   WidthRequest="250"
+                   Margin="0,0,0,10"
+                   HeightRequest="40"/>
+
+            <Entry Placeholder="Teléfono" 
+                   WidthRequest="250"
+                   Margin="0,0,0,10"
+                   HeightRequest="40"
+                   Keyboard="Telephone"/>
+
+            <Entry Placeholder="Correo" 
+                   WidthRequest="250"
+                   Margin="0,0,0,10"
+                   HeightRequest="40"
+                   Keyboard="Email"/>
+
+            <Entry Placeholder="Dirección" 
+                   WidthRequest="250"
+                   Margin="0,0,0,20"
+                   HeightRequest="40"/>
+
+            <Button Text="Guardar Contacto" 
+                   WidthRequest="250"
+                   HeightRequest="45"
+                   CornerRadius="5"/>
+        </FlexLayout>
+    </Grid>
+</ContentPage>

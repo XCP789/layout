@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="layout.Configuracion"
+             Title="Configuración">
+
+    <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="FillAndExpand">
+
+        <Label Text="Configuración" 
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,0,0,10"/>
+
+        <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+            <Switch VerticalOptions="Center"/>
+            <Label Text="Notificaciones" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Cambiar tema"
+                HeightRequest="40"
+                CornerRadius="5"
+                Margin="0,15,0,0"/>
+
+        <Label />
+
+        <Label Text="Cerrar Sesión"
+               FontSize="14"
+               TextColor="Gray"
+               HorizontalOptions="Center"
+               Padding="10">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnLogoutTapped" />
+            </Label.GestureRecognizers>
+        </Label>
+
+    </VerticalStackLayout>
+</ContentPage>

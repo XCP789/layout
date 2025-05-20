@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="layout.LoginPage"
+             Title="LoginPage">
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <!-- Encabezado -->
+        <Label Text="Bienvenido a tu Agenda Personal!!" 
+               FontSize="24" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center" 
+               TextColor="DarkBlue" />
+
+        <!-- Campos de Entrada -->
+        <Entry x:Name="Username" 
+               Placeholder="Usuario" 
+               FontSize="16"
+               BackgroundColor="#E0E0E0"
+               HorizontalOptions="FillAndExpand" />
+        <Entry x:Name="Password" 
+               Placeholder="Contraseña" 
+               IsPassword="True" 
+               FontSize="16"
+               BackgroundColor="#E0E0E0"
+               HorizontalOptions="FillAndExpand" />
+
+        <!-- Botón Iniciar Sesión -->
+        <Button Text="Iniciar Sesión" 
+                FontSize="18"
+                TextColor="White" 
+                BackgroundColor="DarkBlue"
+                HorizontalOptions="FillAndExpand" 
+                Clicked="OnLoginButtonClicked"
+                />
+
+        <!-- Enlaces de Crear Cuenta y Recuperar Contraseña -->
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Label Text="¿No tienes cuenta?" FontSize="14" />
+            <Button Text="Crear cuenta" 
+                    FontSize="14" 
+                    TextColor="DarkBlue" 
+                    BackgroundColor="Transparent" />
+        </HorizontalStackLayout>
+        <Button Text="¿Olvidaste tu contraseña?" 
+                FontSize="14" 
+                TextColor="DarkBlue" 
+                BackgroundColor="Transparent" />
+    </VerticalStackLayout>
+</ContentPage>
+
+
