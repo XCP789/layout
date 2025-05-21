@@ -17,23 +17,27 @@
                    Margin="0,0,0,15"/>
             
             <Entry Placeholder="Nombre" 
+                   x:Name="nombreEntry"
                    WidthRequest="250"
                    Margin="0,0,0,10"
                    HeightRequest="40"/>
 
-            <Entry Placeholder="Teléfono" 
+            <Entry Placeholder="Teléfono"
+                   x:Name="telefonoEntry"
                    WidthRequest="250"
                    Margin="0,0,0,10"
                    HeightRequest="40"
                    Keyboard="Telephone"/>
 
             <Entry Placeholder="Correo" 
+                   x:Name="correoEntry"
                    WidthRequest="250"
                    Margin="0,0,0,10"
                    HeightRequest="40"
                    Keyboard="Email"/>
 
-            <Entry Placeholder="Dirección" 
+            <Entry Placeholder="Direccion"
+                   x:Name="direccionEntry"
                    WidthRequest="250"
                    Margin="0,0,0,20"
                    HeightRequest="40"/>
