@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace layout.Datos
-{
-    public class ContactoDatabase
+namespace layout.Datos;
+
+    class ContactoDatabase
     {
         private readonly SQLiteAsyncConnection _db;
 
@@ -41,4 +41,4 @@ namespace layout.Datos
         public Task<int> GuardarContactoAsync(Contacto contacto) => contacto.Id != 0 ? _db.UpdateAsync(contacto) : _db.InsertAsync(contacto);
         public Task<int> EliminarContactoAsync(Contacto contacto) => _db.DeleteAsync(contacto);
     }
-}
+

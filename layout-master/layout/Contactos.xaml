@@ -3,8 +3,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="layout.Contactos"
              Title="Contactos">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Título con x:Name agregado -->
+            <Label x:Name="titleLabel" 
+               Text="Agenda" 
+               FontAttributes="Bold" 
+               FontSize="Large" 
+               HorizontalOptions="Center"
+               Margin="0,0,0,20" />
 
-    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+            <!-- Lista de contactos -->
+            <CollectionView x:Name="contactosView" 
+                        ItemsSource="{Binding Contacto}"
+                        SelectionMode="Single" 
+                        SelectionChanged="OnContactoSeleccionado">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Eliminar" 
+                                           BackgroundColor="Red" 
+                                           Invoked="OnEliminarContacto" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Frame BorderColor="Navy" 
+                               BackgroundColor="#F0F8FF"
+                               CornerRadius="10" 
+                               Margin="5" 
+                               Padding="15"
+                               HasShadow="True">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Nombre}" 
+                                       FontAttributes="Bold" 
+                                       FontSize="Medium" 
+                                       TextColor="Navy" />
+                                    <Label Text="{Binding Telefono}" 
+                                       FontSize="Small" 
+                                       TextColor="Gray" />
+                                    <Label Text="{Binding CorreoElectronico}" 
+                                       FontSize="Small" 
+                                       TextColor="Gray" 
+                                       FontAttributes="Italic" />
+                                </VerticalStackLayout>
+                            </Frame>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+    <!--<Grid VerticalOptions="Center" HorizontalOptions="Center">
         <VerticalStackLayout Padding="20" Spacing="15" WidthRequest="300">
 
             <Label Text="Mis Contactos" 
@@ -38,5 +88,5 @@
             </CollectionView>
 
         </VerticalStackLayout>
-    </Grid>
+    </Grid>-->
 </ContentPage>

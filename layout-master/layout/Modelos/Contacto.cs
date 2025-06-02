@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using SQLite;
 using System.Xml.Linq;
 
-namespace layout.Modelos
-{
+namespace layout.Modelos;
+
     public class Contacto
     {
         [PrimaryKey, AutoIncrement]
@@ -18,4 +18,3 @@ namespace layout.Modelos
         public string? Direccion { get; set; }
         public bool Activo { get; set; }
     }
-}

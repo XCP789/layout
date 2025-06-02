@@ -35,7 +35,7 @@ namespace layout
         {
             if (((SwipeItem)sender).BindingContext is Contacto contacto)
             {
-                bool confirm = await DisplayAlert("Confirmar", $"¿Eliminar a {contacto.Nombre}?", "Sí", "No");
+                bool confirm = await DisplayAlert("Confirmar", $"ï¿½Eliminar a {contacto.Nombre}?", "Sï¿½", "No");
                 if (confirm)
                 {
 
@@ -47,7 +47,7 @@ namespace layout
 
         private async void OnConfiguracionClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Configuracion());
+            await Navigation.PushAsync(new CrearContacto());
         }
 
 

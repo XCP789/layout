@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="layout.CrearContacto"
              Title="CrearContacto">
-
+    <!--<VerticalStackLayout Padding="20">
+        <Entry x:Name="nombreEntry" Placeholder="Nombre" />
+        <Entry x:Name="telefonoEntry" Placeholder="Teléfono" Keyboard="Telephone" />
+        <Entry x:Name="correoEntry" Placeholder="Correo Electrónico" Keyboard="Email" />
+        <Button Text="Guardar" Clicked="OnGuardarClicked" />
+    </VerticalStackLayout>-->
     <Grid VerticalOptions="Center" HorizontalOptions="Center">
         <FlexLayout Direction="Column" 
                    AlignItems="Center" 
@@ -43,6 +48,7 @@
                    HeightRequest="40"/>
 
             <Button Text="Guardar Contacto" 
+                   Clicked="OnGuardarClicked"
                    WidthRequest="250"
                    HeightRequest="45"
                    CornerRadius="5"/>
